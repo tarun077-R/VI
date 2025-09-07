@@ -4,17 +4,19 @@ export default function FeedbackPage() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    const formData = new FormData(e.target);
+  const formData = new FormData(e.target);
 
-    fetch("/", {
-      method: "POST",
-      body: formData,
-    })
-      .then(() => setSubmitted(true))
-      .catch((error) => alert(error));
-  };
+  fetch("/", {
+    method: "POST",
+    headers: { "Content-Type": "application/x-www-form-urlencoded" },
+    body: new URLSearchParams(formData).toString(),
+  })
+    .then(() => setSubmitted(true))
+    .catch((error) => alert(error));
+};
+
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black p-6">
