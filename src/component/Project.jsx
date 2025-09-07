@@ -45,7 +45,7 @@ function Projects() {
       id="projects"
       className="relative w-full min-h-screen bg-black text-white py-16 px-6 overflow-hidden"
     >
-      <h1 className="text-9xl font-bold mb-14 text-center text-yellow-400">Pro<span className="text-white">jects</span>
+      <h1 className="lg:text-9xl text-6xl font-bold mb-14 text-center text-yellow-400">Pro<span className="text-white">jects</span>
         </h1>
 
       {/* Horizontal Scroll */}
@@ -57,22 +57,22 @@ function Projects() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: i * 0.2 }}
             viewport={{ once: true }}
-            className="min-w-[350px] max-w-[350px] bg-zinc-800 rounded-2xl shadow-lg overflow-hidden flex-shrink-0 hover:scale-105 transition-transform snap-center"
+            className="w-[350px] bg-zinc-800 rounded-2xl shadow-lg overflow-hidden flex-shrink-0 hover:scale-105 transition-transform snap-center"
           >
             <img
               src={project.image}
               alt={project.title}
-              className="w-full h-48 object-cover overflow-hidden"
+              className="w-full lg:h-48 h-64 object-cover overflow-hidden"
             />
             <div className="p-6">
-              <h2 className="text-xl font-semibold">{project.title}</h2>
-              <p className="text-gray-400 font-sans font-bold text-sm mt-2">{project.desc}</p>
+              <h2 className="lg:text-xl text-2xl">{project.title}</h2>
+              <p className="text-gray-400 font-sans font-bold lg:text-sm text-xl lg:mt-2  mt-3">{project.desc}</p>
               <div className="mt-4 flex gap-4">
                 <a
                   href={project.github}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-sans font-bold px-4 py-2 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-white text-sm"
+                  className="font-sans font-bold lg:px-4 px-6 lg:py-2 py-4 rounded-lg bg-yellow-400 hover:bg-yellow-300 text-white lg:text-sm text-lg"
                 >
                   GitHub
                 </a>
@@ -80,7 +80,7 @@ function Projects() {
                   href={project.demo}
                   target="_blank"
                   rel="noreferrer"
-                  className="font-sans font-bold px-4 py-2 rounded-lg bg-blue-600 hover:bg-blue-500 text-white text-sm"
+                  className="font-sans font-bold lg:px-4 px-6 lg:py-2 py-4 rounded-lg bg-blue-600 hover:bg-blue-500 text-white lg:text-sm text-lg"
                 >
                   Live Demo
                 </a>

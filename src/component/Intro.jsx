@@ -8,7 +8,6 @@ const Intro = ({ setShowContent }) => {
 
     tl.to(".vi-text", {
       scale: 2,
-      rotate:5,
       duration: 3,
       ease: "Expo.easeInOut",
       transformOrigin: "50% 50%", // grow from center
@@ -27,12 +26,11 @@ const Intro = ({ setShowContent }) => {
           <mask id="viMask">
             <rect width="100%" height="100%" fill="black" />
             <text
-              className="vi-text"
+              className="vi-text lg:text-9xl text-3xl"
               x="50%"
               y="50%"
               textAnchor="middle"
               dominantBaseline="middle"
-              fontSize="100"
               fontFamily="Arial Black"
               fill="white"
             >
