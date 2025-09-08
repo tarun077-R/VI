@@ -15,7 +15,7 @@ const Landing = () => {
 
       // Text parallax (desktop only)
       gsap.to(".Text", {
-        x:( offsetX * 0.06 - 80)+100,
+        x: offsetX * 0.06 - 80,
         duration: 0.6,
         ease: "power3.out",
       });
@@ -71,21 +71,21 @@ const Landing = () => {
         />
 
         {/* Text */}
-        <div className="Text text-white absolute flex flex-col gap-2 md:gap-3 md:top-10 top-48 left-1/2 -translate-x-1/2 scale-100 md:scale-[1.4] rotate-[-5] md:rotate-[-10]">
-          <h1 className="md:text-[10rem] text-[3rem] leading-none md:-ml-40 -ml-6">
+        <div className="Text text-white absolute flex flex-col gap-2 md:gap-3 md:top-10 top-64 left-1/2 -translate-x-1/2 scale-100 md:scale-[1.4] rotate-[-5] md:rotate-[-10]">
+          <h1 className="md:text-[10rem] text-[6rem] leading-none md:-ml-40 -ml-6">
             Tarun
           </h1>
-          <h1 className="md:text-[10rem] text-[3rem] leading-none md:ml-20 ml-10">
+          <h1 className="md:text-[10rem] text-[6rem] leading-none md:ml-20 ml-10">
             Singh
           </h1>
-          <h1 className="md:text-[10rem] text-[3rem] leading-none md:-ml-40 -ml-6">
+          <h1 className="md:text-[10rem] text-[6rem] leading-none md:-ml-40 -ml-6">
             Rawat
           </h1>
         </div>
 
         {/* Character */}
         <img
-          className="character absolute bottom-0 md:-bottom-[200px] w-[200px] md:w-[400px] left-1/2 -translate-x-1/2 scale-[1.5] md:scale-[3] rotate-[-10deg]"
+          className="character absolute bottom-0 md:-bottom-[200px] w-[300px] md:w-[400px] left-1/2 -translate-x-1/2 scale-[1.5] md:scale-[3] rotate-[-10deg]"
           src="/boy.png"
           alt="Character"
         />
