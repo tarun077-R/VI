@@ -11,12 +11,12 @@ function Card({ title, description, skills, color, reference, index }) {
       dragTransition={{ bounceStiffness: 100, bounceDamping: 10 }}
       transition={{ duration: 0.6, delay: index * 0.2, ease: "easeOut" }}
       className={`absolute flex flex-col items-center justify-start
-        w-60 sm:w-64 md:w-72 h-64 sm:h-72 md:h-80 px-4 sm:px-6 py-6 sm:py-8
+        w-56 sm:w-64 md:w-72 h-64 sm:h-72 md:h-80 px-4 sm:px-6 py-6 sm:py-8
         rounded-3xl text-white ${color} overflow-hidden shadow-2xl cursor-grab active:cursor-grabbing`}
       style={{
-        top: `${40 + index * 10}%`, // stagger cards vertically on small screens
-        left: `${50 + index * 5}%`,
-        transform: "translate(-50%, -50%)",
+        top: `50%`, // all centered vertically
+        left: `50%`, // all centered horizontally
+        transform: `translate(-50%, -50%) rotate(${index * 6 - 6}deg)`, // stagger rotation
       }}
     >
       <h3 className="text-xl sm:text-2xl font-bold mb-2 tracking-wide">{title}</h3>
@@ -31,7 +31,7 @@ function Card({ title, description, skills, color, reference, index }) {
             className="flex flex-col items-center justify-center p-2 rounded-lg bg-white/10 backdrop-blur-sm hover:bg-white/20 transition"
           >
             <i className={`ri-${skill.icon} text-2xl sm:text-3xl`} />
-            <span className="text-xs sm:text-xs mt-1">{skill.name}</span>
+            <span className="text-xs sm:text-sm mt-1">{skill.name}</span>
           </div>
         ))}
       </div>
@@ -84,7 +84,7 @@ function SkillsPage() {
       ref={ref}
       className="relative w-full min-h-screen bg-black text-center overflow-hidden p-6 sm:p-10"
     >
-      <h1 className="absolute top-0 w-full mr-5 text-center
+      <h1 className="absolute top-8 w-full text-center
         text-6xl sm:text-7xl md:text-9xl opacity-10 select-none text-yellow-400">
         Ski<span className="text-white">lls</span>
       </h1>

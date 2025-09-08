@@ -39,7 +39,7 @@ const App = () => {
     });
     gsap.to(".character", {
       scale: 1,
-      bottom: "-25%",
+      bottom: "0%",
       rotate: 0,
       duration: 2,
       delay: -0.8,
@@ -59,7 +59,7 @@ const App = () => {
       {!showContent && <Intro setShowContent={setShowContent} />}
 
       {showContent && (
-        <div className="main overflow-hidden w-full rotate-[-10deg] scale-[1.7]">
+        <div className="main overflow-hidden w-full rotate-[-10deg] scale-[1.7] md:scale-[1.7]">
           <Landing />
           <About />
           <SkillsPage />

@@ -5,8 +5,10 @@ import gsap from "gsap";
 const Intro = ({ setShowContent }) => {
   useGSAP(() => {
     const tl = gsap.timeline();
+    const isMobile = window.innerWidth < 768;
 
     tl.to(".vi-text", {
+        scale: isMobile ? 3 : 2, // bigger on small screens
       scale: 2,
       duration: 3,
       ease: "Expo.easeInOut",
@@ -26,13 +28,14 @@ const Intro = ({ setShowContent }) => {
           <mask id="viMask">
             <rect width="100%" height="100%" fill="black" />
             <text
-              className="vi-text lg:text-9xl text-3xl"
+              className="vi-text"
               x="50%"
               y="50%"
               textAnchor="middle"
               dominantBaseline="middle"
               fontFamily="Arial Black"
               fill="white"
+              fontSize="15vw"
             >
              TARUN
             </text>

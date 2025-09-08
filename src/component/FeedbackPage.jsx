@@ -4,26 +4,25 @@ export default function FeedbackPage() {
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e) => {
-  e.preventDefault();
+    e.preventDefault();
 
-  const formData = new FormData(e.target);
+    const formData = new FormData(e.target);
 
-  fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
-  })
-    .then(() => setSubmitted(true))
-    .catch((error) => alert(error));
-};
-
+    fetch("/", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: new URLSearchParams(formData).toString(),
+    })
+      .then(() => setSubmitted(true))
+      .catch((error) => alert(error));
+  };
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-black p-6">
-      <h1 className="text-6xl font-bold text-yellow-400 mb-4">
+      <h1 className="text-5xl sm:text-6xl font-bold text-yellow-400 mb-4 text-center">
         ✨ Thanks for Visiting!
       </h1>
-      <p className="text-2xl text-white mb-8">
+      <p className="text-lg sm:text-2xl text-white mb-8 text-center">
         I’d love to hear your feedback 👇
       </p>
 
@@ -38,6 +37,7 @@ export default function FeedbackPage() {
         >
           <input type="hidden" name="form-name" value="feedback" />
 
+          {/* Name */}
           <div className="mb-4">
             <label className="block text-white">Name</label>
             <input
@@ -48,6 +48,7 @@ export default function FeedbackPage() {
             />
           </div>
 
+          {/* Email */}
           <div className="mb-4">
             <label className="block text-white">Email</label>
             <input
@@ -58,6 +59,7 @@ export default function FeedbackPage() {
             />
           </div>
 
+          {/* Feedback */}
           <div className="mb-4">
             <label className="block text-white">Feedback</label>
             <textarea
@@ -68,6 +70,7 @@ export default function FeedbackPage() {
             />
           </div>
 
+          {/* Button */}
           <button
             type="submit"
             className="w-full bg-yellow-400 text-black font-semibold py-2 rounded-lg hover:bg-yellow-500 transition"
@@ -76,7 +79,7 @@ export default function FeedbackPage() {
           </button>
         </form>
       ) : (
-        <p className="mt-4 text-green-400 text-lg font-medium">
+        <p className="mt-4 text-green-400 text-lg font-medium text-center">
           ✅ Thanks for your feedback!
         </p>
       )}
