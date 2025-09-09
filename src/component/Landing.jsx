@@ -15,7 +15,7 @@ const Landing = () => {
 
       // Text parallax (desktop only)
       gsap.to(".Text", {
-        x: offsetX * 0.06 - 80,
+        x: offsetX * 0.06,
         duration: 0.6,
         ease: "power3.out",
       });
