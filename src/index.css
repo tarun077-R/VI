@@ -1,6 +1,9 @@
 @import "tailwindcss";
 @import 'tailwind-scrollbar-hide/v4';
 
+html {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "pricedown";
   src: url("../public/pricedown.otf");

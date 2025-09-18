@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";   // ✅ import Link
 
 const About = () => {
   return (
@@ -45,12 +46,17 @@ const About = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 mt-6 sm:mt-10 justify-center lg:justify-start">
-            <button className="bg-yellow-500 px-6 py-3 sm:px-8 sm:py-4 text-black text-base sm:text-lg lg:text-xl font-semibold hover:bg-yellow-400 transition">
+            {/* Resume Button */}
+            <a
+              href="/Tarun-Resume.pdf"
+              download="Tarun-Resume.pdf"
+              className="bg-yellow-500 px-6 py-3 sm:px-8 sm:py-4 text-black 
+                         text-base sm:text-lg lg:text-xl font-semibold 
+                         hover:bg-yellow-400 transition text-center"
+            >
               Download Resume
-            </button>
-            <button className="border-2 border-yellow-500 px-6 py-3 sm:px-8 sm:py-4 text-yellow-500 text-base sm:text-lg lg:text-xl font-semibold hover:bg-yellow-500 hover:text-black transition">
-              Contact Me
-            </button>
+            </a>
+           
           </div>
         </div>
       </div>
